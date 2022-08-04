@@ -13,7 +13,7 @@ phases:
   build:
     commands:
         - npm run lint
-        #- npm run prettier
+        - npx run prettier
         - CI=true npm run test
         - npm run build
       
