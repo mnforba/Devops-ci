@@ -1,0 +1,14 @@
+version: 0.2
+env:
+  shell: bash
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+   pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+      - npm run lint
+      - npm run test 
+      - npm run build 
