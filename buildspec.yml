@@ -12,9 +12,10 @@ phases:
   build:
     commands:
         - npm run lint
-        - npm run build
         - npm run prettier
         - npm run test
+        - npm run build
+      
      
 artifacts:
   # include all files required to run application
