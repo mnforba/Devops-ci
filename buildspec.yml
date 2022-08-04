@@ -14,7 +14,6 @@ phases:
         # run build script
         - npm run-script build
         - npm run lint
-        - npm run prettier
         - npm run build
         - npm run test
      
