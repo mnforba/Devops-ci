@@ -8,7 +8,7 @@ phases:
     commands:
         # install npm
         - npm install
-        - npm install --save-dev -save-exact prettier
+          #- npm install --save-dev -save-exact prettier
        
   build:
     commands:
