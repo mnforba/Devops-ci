@@ -13,7 +13,6 @@ phases:
     commands:
         - npm run lint
         - npm run build
-        - npm run test
      
 artifacts:
   # include all files required to run application
