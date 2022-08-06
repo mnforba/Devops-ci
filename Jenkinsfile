@@ -12,13 +12,7 @@ node
         sh 'npm install'
 	}
  }
- stage("build")
- {
- nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
-        sh 'npm run build'
-	}
- }
- /*
+ 
  stage("LintTest")
  {
  nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
@@ -26,14 +20,26 @@ node
         sh 'npm run lint'
 	}
  }
- */
+ 
  stage("PrettierTest")
  {
  nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm install prettier --save-dev'
         sh 'npm run prettier'
 	}
- }  
+ }
+ stage("Test")
+ {
+ nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
+        sh 'CI=true npm run test'
+	}
+ }
+ stage("build")
+ {
+ nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
+        sh 'npm run build'
+	}
+ }
  /*
   stage('ExecuteSonarQubeReport') {
      nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
