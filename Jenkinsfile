@@ -34,7 +34,7 @@ node
         sh 'CI=true npm run test'
 	}
  }
- stage("Testbuild")
+ stage("Postbuild")
  {
  nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm run build'
