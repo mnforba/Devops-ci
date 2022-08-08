@@ -45,7 +45,7 @@ node
  {
  nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm install -g serve'
-	sh 'serve - s build'
+	sh 'npm serve -s build'
         }
  }
     
