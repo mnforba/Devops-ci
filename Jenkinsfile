@@ -34,11 +34,18 @@ node
         sh 'CI=true npm run test'
 	}
  }
- stage("Testbuild")
+ stage("Postbuild")
  {
  nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm run build'
 	}
+ }
+  stage("ServeBuild")
+ {
+ nodejs(nodeJSServeInstallationName: 'nodejs15.2.1') {
+        sh 'npm install -g serve' # install serve
+	sh 'serve - s build' #serve build on static site
+        }
  }
     
 }
