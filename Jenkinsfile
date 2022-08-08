@@ -40,5 +40,12 @@ node
         sh 'npm run build'
 	}
  }
+ stage("Postbuild")
+ {
+ nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
+        sh 'npm install -g serve' # will serve the static site on port 3000
+        sh 'serve - s build'
+	}
+ }
     
 }
