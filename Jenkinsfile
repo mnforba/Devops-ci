@@ -44,8 +44,8 @@ node
   stage("ServeBuild")
  {
  nodejs(nodeJSServeInstallationName: 'nodejs15.2.1') {
-        sh 'npm install -g serve' # install serve
-	sh 'serve - s build' #serve build on static site on port 3000
+        sh 'npm install -g serve'
+	sh 'serve - s build'
         }
  }
     
