@@ -43,7 +43,7 @@ node
 
   stage("ServeBuild")
  {
- nodejs(nodeJSServeInstallationName: 'nodejs15.2.1') {
+ nodejs(nodeJSInstallationName: 'nodejs15.2.1') {
         sh 'npm install -g serve'
 	sh 'serve - s build'
         }
